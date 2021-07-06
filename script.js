@@ -30,6 +30,9 @@ async function connect() {
   // request a port and open a connection
   port = await navigator.serial.requestPort();
   
+  // filter for axidraw
+//   port = await navigator.serial.requestPort({ filters: [{ usbVendorId: 0x04d8, usbProductId: 0xfd92 }] });
+  
   // wait for the port to open
   await port.open({ baudRate: 38400 });
 
