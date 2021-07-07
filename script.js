@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Browser not supported - please try again in chrome');
     butConnect.innerText = 'Browser not supported';
     butConnect.disabled = true;
-    butSubmit.disabled = true;
+//     butSubmit.disabled = true;
   }
 });
 
@@ -84,14 +84,14 @@ async function clickConnect() {
     console.log('port is already active - attempting to disconnect');
     await disconnect();
     butConnect.disabled = true;
-    butSubmit.disabled = true;
+//     butSubmit.disabled = true;
     return;
   }
   // connect
   console.log('attempting to connect');
   await connect();
   butConnect.innerText = 'Disconnect';
-  butSubmit.disabled = false;
+//   butSubmit.disabled = false;
 }
 
 // click handler for the submit button
